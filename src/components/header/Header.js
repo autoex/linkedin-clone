@@ -1,7 +1,12 @@
 import React from 'react';
 import './Header.css';
-import HeaderSearch from "../header_search/HeaderSearch";
-import HeaderOption from "../header_option/HeaderOption";
+import HeaderSearch from "./header_search/HeaderSearch";
+import HeaderOption from "./header_option/HeaderOption";
+import HomeIcon from '@material-ui/icons/Home';
+import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount';
+import NotificationsIcon from '@material-ui/icons/Notifications';
+import ChatIcon from '@material-ui/icons/Chat';
+import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
 
 const Header = () => {
     return (
@@ -11,7 +16,12 @@ const Header = () => {
                 <HeaderSearch/>
             </div>
             <div className="header__right">
-                <HeaderOption/>
+                <HeaderOption Icon={HomeIcon} title={'Home'}/>
+                <HeaderOption Icon={SupervisorAccountIcon} title={'My Network'}/>
+                <HeaderOption Icon={BusinessCenterIcon} title={'Jobs'}/>
+                <HeaderOption Icon={ChatIcon} title={'Messaging'}/>
+                <HeaderOption Icon={NotificationsIcon} title={'Notifications'}/>
+                <HeaderOption avatar={'https://yt3.ggpht.com/yti/APfAmoFzyI0PnKwyxw4PxBsobbBKuxhVNvh7QCdb2c2xWw=s88-c-k-c0x00ffffff-no-rj-mo'} title={'Me'}/>
             </div>
         </div>
     );

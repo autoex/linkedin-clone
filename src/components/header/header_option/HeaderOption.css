@@ -1,0 +1,20 @@
+.headerOption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: darkgray;
+    cursor: pointer;
+    padding: 0 5px;
+}
+.headerOption:hover {
+    color: #000;
+    transition: all .4s;
+}
+.headerOption__icon {
+    object-fit: contain;
+    height: 25px!important;
+    width: 25px!important;
+}
+.headerOption__title {
+    font-size: 15px;
+}
