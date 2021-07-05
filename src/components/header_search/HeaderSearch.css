@@ -1,0 +1,12 @@
+.header__search {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    border-radius: 5px;
+    background: #F5F3F4;
+}
+.header__search > input {
+    border: none;
+    outline: none;
+    background: none;
+}
