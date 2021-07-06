@@ -2,7 +2,7 @@ import React from 'react';
 
 const Widgets = () => {
     return (
-        <div>
+        <div className='app__widgets'>
             Widgets
         </div>
     );

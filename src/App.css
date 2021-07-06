@@ -1,4 +1,17 @@
+.app {
+    background: #F5F1F1;
+}
 .app__main {
     display: flex;
     justify-content: space-evenly;
+        padding-top: 10px;
+}
+.app__sidebar {
+    flex: 0.2;
+}
+.app__feed {
+    flex: 0.6;
+}
+.app__widgets {
+    flex: 0.2;
 }
