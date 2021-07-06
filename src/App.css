@@ -11,6 +11,7 @@
 }
 .app__feed {
     flex: 0.6;
+    margin: 0 20px;
 }
 .app__widgets {
     flex: 0.2;
