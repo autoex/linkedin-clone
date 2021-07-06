@@ -9,9 +9,15 @@ import AddToQueueIcon from '@material-ui/icons/AddToQueue';
 import Post from "../post/Post";
 
 const Feed = () => {
-    const [posts, setPost] = useState(['First post']);
+    const [posts, setPost] = useState([]);
+    const [inptValue, setInptValue] = useState('');
+    const addPost =(e)=> {
+        setInptValue(e.target.value)
+    }
     const sendPost =(e)=> {
         e.preventDefault()
+        setPost([...posts, inptValue])
+        setInptValue('')
 
     }
     return (
@@ -20,7 +26,7 @@ const Feed = () => {
                 <div className="feed__input">
                     <CreateIcon/>
                     <form action="">
-                        <input type="text"/>
+                        <input type="text" value={inptValue} onChange={addPost}/>
                         <button onClick={sendPost} type='submit'>Send</button>
                     </form>
                 </div>
