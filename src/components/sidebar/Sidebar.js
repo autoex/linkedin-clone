@@ -11,6 +11,7 @@ const Sidebar = () => {
     )
     return (
         <div className='app__sidebar'>
+            <div className='sidebar'>
 
             <div className='sidebar__top'>
                 <img
@@ -33,7 +34,7 @@ const Sidebar = () => {
             <div className="sidebar__bottom">Recent
                 {recentItem('js')}
                 {recentItem('football')}</div>
-        </div>
+        </div></div>
     );
 };
 

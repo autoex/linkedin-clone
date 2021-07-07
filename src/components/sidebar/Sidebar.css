@@ -1,4 +1,8 @@
-.sidebar__top {
+.sidebar {
+    top: 75px;
+    position: sticky;
+}.sidebar__top {
+
     display: flex;
     flex-direction: column;
     border-top-left-radius: 10px;
