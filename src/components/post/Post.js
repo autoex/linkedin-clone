@@ -8,7 +8,6 @@ import ShareIcon from '@material-ui/icons/Share';
 import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
 
 const Post = ({name, description, message, photoUrl}) => {
-    console.log(message)
     return (
         <div className='post'>
             <div className="post__header">
