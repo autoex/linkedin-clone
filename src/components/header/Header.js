@@ -7,8 +7,11 @@ import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import ChatIcon from '@material-ui/icons/Chat';
 import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
+import {useDispatch} from "react-redux";
+import {logout} from "../../app/features/userSlice";
 
 const Header = () => {
+    const dispatch =useDispatch()
     return (
         <div className='header'>
             <div className="header__left">
@@ -21,7 +24,7 @@ const Header = () => {
                 <HeaderOption Icon={BusinessCenterIcon} title={'Jobs'}/>
                 <HeaderOption Icon={ChatIcon} title={'Messaging'}/>
                 <HeaderOption Icon={NotificationsIcon} title={'Notifications'}/>
-                <HeaderOption avatar={'https://yt3.ggpht.com/yti/APfAmoFzyI0PnKwyxw4PxBsobbBKuxhVNvh7QCdb2c2xWw=s88-c-k-c0x00ffffff-no-rj-mo'} title={'Me'}/>
+                <HeaderOption onClick={()=> dispatch(logout())} avatar={'https://yt3.ggpht.com/yti/APfAmoFzyI0PnKwyxw4PxBsobbBKuxhVNvh7QCdb2c2xWw=s88-c-k-c0x00ffffff-no-rj-mo'} title={'Me'}/>
             </div>
         </div>
     );
