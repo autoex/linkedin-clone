@@ -29,8 +29,8 @@ const Login = () => {
                         dispatch(login({
                             email: userAuth.user.email,
                             uid: userAuth.user.uid,
-                            displayName: name,
-                            photoURL: profilePic
+                            displayName: userAuth.user.displayName,
+                            photoURL: userAuth.user.photoURL
                         }))
                     })
             })
@@ -39,6 +39,16 @@ const Login = () => {
     }
     const loginToApp =(e)=> {
         e.preventDefault();
+        auth.signInWithEmailAndPassword(email, pass)
+            .then(userAuth=> {
+                dispatch(login({
+                    email: userAuth.user.email,
+                    uid: userAuth.user.uid,
+                    displayName: name,
+                    photoURL: userAuth.user.photoURL
+                }))
+            })
+            .catch(err=> console.log(err))
     }
     return (
         <div className='app__login'>
