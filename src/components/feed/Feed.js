@@ -9,8 +9,11 @@ import AddToQueueIcon from '@material-ui/icons/AddToQueue';
 import Post from "../post/Post";
 import {db} from '../../firebaseConf'
 import firebase from "firebase";
+import {useSelector} from "react-redux";
+import {selectUser} from "../../app/features/userSlice";
 
 const Feed = () => {
+    const user = useSelector(selectUser);
     const [posts, setPosts] = useState([]);
     const [input, setInput] = useState('');
 
@@ -33,10 +36,10 @@ const Feed = () => {
     const sendPost = (e) => {
         e.preventDefault();
         db.collection('posts').add({
-            name: 'SS ff',
-            description: 'test',
+            name: user.displayName,
+            description: user.email,
             message: input,
-            photoUrl: '',
+            photoUrl: user.photoURL || '',
             timestamp: firebase.firestore.FieldValue.serverTimestamp()
         })
 setInput('')
