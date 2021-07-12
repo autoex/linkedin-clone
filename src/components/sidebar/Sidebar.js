@@ -5,7 +5,8 @@ import {useSelector} from "react-redux";
 import {selectUser} from "../../app/features/userSlice";
 
 const Sidebar = () => {
-    const users = useSelector(selectUser);
+    const user = useSelector(selectUser);
+    console.log(user)
 
     const recentItem = (title) => (
         <div className='sidebar__recentItem'>
@@ -21,9 +22,10 @@ const Sidebar = () => {
                 <img
                     src="https://img.freepik.com/free-vector/abstract-blue-geometric-shapes-background_1035-17545.jpg?size=626&ext=jpg"
                     alt=""/>
-                <Avatar/>
-                <h2>{users.displayName}</h2>
-                <h4>{users.email}</h4>
+                <Avatar src={user.photoURL}>
+                    {user.email[0]}</Avatar>
+                <h2>{user.displayName}</h2>
+                <h4>{user.email}</h4>
             </div>
             <div className="sidebar__stat">
                 <div className="sidebar__stats">
