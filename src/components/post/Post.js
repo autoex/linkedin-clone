@@ -6,8 +6,6 @@ import ThumbUpAltOutlinedIcon from '@material-ui/icons/ThumbUpAltOutlined';
 import SendIcon from '@material-ui/icons/Send';
 import ShareIcon from '@material-ui/icons/Share';
 import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
-import {useSelector} from "react-redux";
-import {selectUser} from "../../app/features/userSlice";
 
 const Post = ({name, description, message, photoUrl}) => {
 
