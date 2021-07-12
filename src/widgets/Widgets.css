@@ -1,0 +1,23 @@
+.widgets {
+    background: white;
+    position: sticky;
+    top: 75px;
+    border: solid 1px lightgray;
+    padding: 10px;
+    border-radius: 10px;
+}
+.widgets__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+}
+.widget__article {
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 10px;
+}
+.widget__articleRight {
+    display: flex;
+   flex-direction: column;
+}

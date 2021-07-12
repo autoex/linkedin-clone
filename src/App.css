@@ -1,10 +1,13 @@
 .app {
 
+
 }
 .app__main {
     display: flex;
-    justify-content: space-evenly;
-        padding-top: 10px;
+ margin: auto;
+    padding: 10px;
+    width: 1000px;
+
 }
 .app__sidebar {
     flex: 0.2;
@@ -15,4 +18,5 @@
 }
 .app__widgets {
     flex: 0.2;
+
 }
